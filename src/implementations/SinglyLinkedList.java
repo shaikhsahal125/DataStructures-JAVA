@@ -27,7 +27,6 @@ public class SinglyLinkedList<T> implements ISinglyLinkedList<T>{
 	}
 	
 	
-	
 	protected SNode head = null;
 	protected SNode tail = null;
 	private int size = 0;
