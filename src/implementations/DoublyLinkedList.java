@@ -39,14 +39,27 @@ public class DoublyLinkedList<T> implements IDoublyLinkedList<T>{
 
 	@Override
 	public void addFirst(T data) {
-		// TODO Auto-generated method stub
+		if (isEmpty()) {
+			head = new DNode(data);
+			tail = head;
+			size++;
+		} else {
+			DNode temp = new DNode(data);
+			temp.setNextNode(head);
+			head.setPrevNode(temp);
+			head = temp;
+			size++;
+		}
 		
 	}
 
 	@Override
 	public T getFirst() {
-		// TODO Auto-generated method stub
-		return null;
+		if (isEmpty()) {
+			throw new java.util.NoSuchElementException();
+		} else {
+			return head.getData();
+		}
 	}
 
 	@Override
@@ -57,14 +70,26 @@ public class DoublyLinkedList<T> implements IDoublyLinkedList<T>{
 
 	@Override
 	public void addLast(T data) {
-		// TODO Auto-generated method stub
-		
+		if (isEmpty()) {
+			head = new DNode(data);
+			tail = head;
+			size++;
+		} else {
+			DNode temp = new DNode(data);
+			tail.setNextNode(temp);
+			temp.setPrevNode(tail);
+			tail = temp;
+			size++;
+		}
 	}
 
 	@Override
 	public T getLast() {
-		// TODO Auto-generated method stub
-		return null;
+		if (isEmpty()) {
+			throw new java.util.NoSuchElementException();
+		} else {
+			return tail.getData();
+		}
 	}
 
 	@Override
@@ -75,14 +100,12 @@ public class DoublyLinkedList<T> implements IDoublyLinkedList<T>{
 
 	@Override
 	public int getSize() {
-		// TODO Auto-generated method stub
-		return 0;
+		return size;
 	}
 
 	@Override
 	public boolean isEmpty() {
-		// TODO Auto-generated method stub
-		return false;
+		return size == 0;
 	}
 	
 	@Override
