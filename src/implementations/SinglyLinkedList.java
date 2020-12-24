@@ -5,6 +5,29 @@ import java.util.Iterator;
 import interfaces.ISinglyLinkedList;
 
 public class SinglyLinkedList<T> implements ISinglyLinkedList<T>{
+	
+	protected class SNode {
+		private SNode nextNode;
+		private T data;
+		public SNode(T data) {
+			setData(data);
+		}
+		public SNode getNextNode() {
+			return nextNode;
+		}
+		public void setNextNode(SNode nextNode) {
+			this.nextNode = nextNode;
+		}
+		public T getData() {
+			return data;
+		}
+		public void setData(T data) {
+			this.data = data;
+		}
+	}
+	
+	
+	
 	protected SNode head = null;
 	protected SNode tail = null;
 	private int size = 0;
@@ -122,24 +145,4 @@ public class SinglyLinkedList<T> implements ISinglyLinkedList<T>{
 		}
 	}
 	
-	protected class SNode {
-		private SNode nextNode;
-		private T data;
-		public SNode(T data) {
-			setData(data);
-		}
-		public SNode getNextNode() {
-			return nextNode;
-		}
-		public void setNextNode(SNode nextNode) {
-			this.nextNode = nextNode;
-		}
-		public T getData() {
-			return data;
-		}
-		public void setData(T data) {
-			this.data = data;
-		}
-	}
-
 }
