@@ -64,8 +64,17 @@ public class DoublyLinkedList<T> implements IDoublyLinkedList<T>{
 
 	@Override
 	public T removeFirst() {
-		// TODO Auto-generated method stub
-		return null;
+		DNode tempNode = head;
+		if (isEmpty()) {
+			throw new java.util.NoSuchElementException();
+		} else if (getSize() == 1) {
+			head = tail = null;
+		} else {
+			head = tempNode.getNextNode();
+			head.setPrevNode(null);
+		}
+		size--;
+		return tempNode.getData();
 	}
 
 	@Override
@@ -94,8 +103,17 @@ public class DoublyLinkedList<T> implements IDoublyLinkedList<T>{
 
 	@Override
 	public T removeLast() {
-		// TODO Auto-generated method stub
-		return null;
+		DNode temNode = tail;
+		if (isEmpty()) {
+			throw new java.util.NoSuchElementException();
+		} else if (getSize() == 1) {
+			head = tail = null;
+		} else {
+			tail = temNode.getPrevNode();
+			tail.setNextNode(null);
+		}
+		size--;
+		return temNode.getData();
 	}
 
 	@Override
