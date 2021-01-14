@@ -44,13 +44,11 @@ public class StackTest {
 	@Test (expected=java.util.NoSuchElementException.class)
 	public void pushNoneCheckPeek() {
 		IStack<Double> stack = new Stack<>();
-		@SuppressWarnings("unused")
 		Double d = stack.peek();
 	}
 	@Test (expected=java.util.NoSuchElementException.class)
 	public void pushNoneCheckPop() {
 		IStack<Double> stack = new Stack<>();
-		@SuppressWarnings("unused")
 		Double d = stack.pop();
 	}
 	@Test
