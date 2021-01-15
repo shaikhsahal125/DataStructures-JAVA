@@ -9,55 +9,57 @@ public class Deque<T> implements IDeque<T> {
 	@Override
 	public void enqueueFirst(T data) {
 		// TODO Auto-generated method stub
+		theList.addFirst(data);
 		
 	}
 
 	@Override
 	public void enqueueLast(T data) {
 		// TODO Auto-generated method stub
+		theList.addLast(data);
 		
 	}
 
 	@Override
 	public T peekFirst() {
 		// TODO Auto-generated method stub
-		return null;
+		return theList.getFirst();
 	}
 
 	@Override
 	public T peekLast() {
 		// TODO Auto-generated method stub
-		return null;
+		return theList.getLast();
 	}
 
 	@Override
 	public T dequeueFirst() {
 		// TODO Auto-generated method stub
-		return null;
+		return theList.removeFirst();
 	}
 
 	@Override
 	public T dequeueLast() {
 		// TODO Auto-generated method stub
-		return null;
+		return theList.removeLast();
 	}
 
 	@Override
 	public IDoublyLinkedList<T> asList() {
 		// TODO Auto-generated method stub
-		return null;
+		return theList;
 	}
 
 	@Override
 	public int getSize() {
 		// TODO Auto-generated method stub
-		return 0;
+		return theList.getSize();
 	}
 
 	@Override
 	public boolean isEmpty() {
 		// TODO Auto-generated method stub
-		return false;
+		return theList.isEmpty();
 	}
 
 	@Override
