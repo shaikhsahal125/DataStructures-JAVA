@@ -4,6 +4,7 @@ import interfaces.IDoublyLinkedList;
 import interfaces.ISinglyLinkedList;
 import interfaces.IStack;
 
+@SuppressWarnings("unused")
 public class Stack<T> implements IStack<T> {
 	
 	private ISinglyLinkedList<T> theList = new SinglyLinkedList<>();
